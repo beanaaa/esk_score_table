@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.racing-gradient {
+  background: linear-gradient(45deg, #ff0000, #ff3333, #ff6666);
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  @apply bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded transition duration-300;
+}
+
+.btn-secondary {
+  @apply bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded transition duration-300;
+}
+
+.input-field {
+  @apply w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-red-500;
+}
+
+.table-racing {
+  @apply w-full border-collapse;
+  table-layout: fixed;
+}
+
+.table-racing th,
+.table-racing td {
+  @apply border-b border-gray-200 p-3 whitespace-nowrap;
+}
+
+.table-racing tr:nth-child(even) {
+  @apply bg-gray-100;
+}
+
+.table-racing tr:hover {
+  @apply bg-red-100;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.sticky {
+  position: sticky;
+  background-color: inherit;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.table-racing th {
+  background-color: #1f2937;
+  color: white;
+}
+
+.table-racing td {
+  background-color: white;
+}
+
+.table-racing tr:nth-child(even) td {
+  background-color: #f3f4f6;
+}
+
+.table-racing tr:hover td {
+  background-color: #fee2e2;
+}
+
+/* 새로운 스타일 추가 */
+.table-racing th,
+.table-racing td {
+  @apply px-2 py-3 text-sm;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.table-racing th:first-child,
+.table-racing td:first-child {
+  @apply pl-4;
+}
+
+.table-racing th:last-child,
+.table-racing td:last-child {
+  @apply pr-4;
+}
